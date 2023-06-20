@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  # Book Routes
+  resources :books
+
   # Login Routes
   get 'sign_in', to: 'login#new'
   post 'sign_in', to: 'login#create'
