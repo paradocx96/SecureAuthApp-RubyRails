@@ -1,0 +1,33 @@
+<%= form_with(model: book) do |form| %>
+  <% if book.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+        <% book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3 form-group">
+    <%= form.text_field :title, class: "form-control", placeholder: "Title" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.text_field :author, class: "form-control", placeholder: "Author" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.text_field :genre, class: "form-control", placeholder: "Genre" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.number_field :publication_year, class: "form-control" %>
+  </div>
+
+  <div class="mb-3 form-group">
+    <%= form.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,8 @@
+<h1>Update book</h1>
+
+<%= render "form", book: @book %>
+
+<div class="btn-group" role="group" aria-label="Basic example">
+  <%= link_to "Show this book", @book, class: "btn btn-primary" %>
+  <%= link_to "Back to books", books_path, class: "btn btn-primary" %>
+</div>

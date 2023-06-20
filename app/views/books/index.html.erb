@@ -1,0 +1,19 @@
+<h1>Books</h1>
+
+<div id="books">
+  <div class="row">
+    <% @books.each do |book| %>
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="card mb-3" id="<%= dom_id book %>">
+          <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149342941.jpg" class="card-img-top" alt="book">
+          <div class="card-body">
+            <h5 class="card-title"><%= book.title %></h5>
+            <p class="card-text"><%= book.author %></p>
+            <%= link_to "Show this book", book, class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+<br/>

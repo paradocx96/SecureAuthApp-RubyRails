@@ -1,0 +1,20 @@
+<div class="card mb-3" id="<%= dom_id book %>">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books_23-2149342941.jpg" class="img-fluid rounded-start" alt="Book">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%= book.title %></h5>
+        <p class="card-text"><strong>Author:</strong> <%= book.author %></p>
+        <p class="card-text">
+          <small class="text-body-secondary">
+            <strong>Genre:</strong> <%= book.genre %>
+            <br/>
+            <strong>Publication year:</strong> <%= book.publication_year %>
+          </small>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
