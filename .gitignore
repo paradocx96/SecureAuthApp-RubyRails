@@ -33,3 +33,6 @@
 # IDEs
 .idea
 .vscode
+
+# Enviroment
+.env
