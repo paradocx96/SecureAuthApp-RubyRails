@@ -9,7 +9,7 @@ class LoginController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_path, notice: 'User Successfully Logged!'
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
