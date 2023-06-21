@@ -5,10 +5,14 @@
   <div class="card-body">
     <%= form_with model: @user, url: sign_up_path do |form| %>
       <% if @user.errors.any? %>
-        <div class="alert alert-danger">
-          <% @user.errors.full_messages.each do |message| %>
-            <div><%= message %></div>
-          <% end %>
+        <div  style="color: red">
+          <h5><%= pluralize(@user.errors.count, "error") %> prohibited this user registration!</h5>
+
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
         </div>
       <% end %>
 
