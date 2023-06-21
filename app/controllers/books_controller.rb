@@ -1,4 +1,5 @@
 class BooksController < ApplicationController
+  before_action :require_auth
   before_action :set_book, only: %i[ show edit update destroy ]
 
   # GET /books or /books.json
